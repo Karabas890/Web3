@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <h:outputStylesheet library="Styles" name="main_page_style.css"/>
+    <title>Title</title>
+</h:head>
+<h:body style="background-image: url('2.jpeg');">
+    <h:outputScript library="js" name="canvas.js"/>
+    <h:outputScript library="js" name="main.js"/>
+    <div class="block block2">
+
+        <label class="words">Введите X:</label>
+        <select id="X">
+            <option>-5</option>
+            <option>-4</option>
+            <option>-3</option>
+            <option>-2</option>
+            <option>-1</option>
+            <option>-0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+
+        </select>
+        <br/>
+        <label class="words">Введите Y(-5...5):</label>
+        <input type="text" maxlength="10" id="Y"/>
+        <label class="words">Введите R:</label>
+        <select id="R" onchange="changeR()">
+            <option>1</option>
+            <option>1.5</option>
+            <option>2</option>
+            <option>2.5</option>
+            <option>3</option>
+        </select>
+        <br/>
+        <button class="button" onclick="onClickButton()">Посчитать</button>
+        <br/>
+        <span id="result" >Ожидание ввода</span>
+    </div>
+
+</h:body>
+</html>
